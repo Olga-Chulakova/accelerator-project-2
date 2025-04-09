@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lifetour - туры по горам Кавказа</title>
+  <title>Lifetour - туры по горам</title>
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -12,36 +12,36 @@
 
 <body class="page-body">
   <header class="main-header" data-test="header">
-    <div class="main-header__menu menu">
-      <button class="menu__button" aria-label="Открыть меню"></button>
-      <nav class="menu__nav">
-        <ul class="menu__list"> 
-          <li class="menu__item">
-            <a class="menu__link" href="#">Туры</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Обучение</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">О нас</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Отзывы</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Фотографии</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="main-header__wrapper">
+    <div class="main-header__container container">
+      <div class="main-header__menu menu">
+        <button class="menu__button" type="button" aria-label="Открыть меню"></button>
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Туры</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Обучение</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Фотографии</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo.svg" width="142" height="42" type="image/svg+xml">
-        <source media="(min-width: 768px)" srcset="img/logo.svg" width="142" height="42" type="image/svg+xml">
-        <img class="main-header__logo" src="img/logo.svg" width="142" height="42" alt="Логотип сайта Lifetour">
+        <source media="(min-width: 1440px)" srcset="img/logotype.svg" width="142" height="42" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="img/logotype.svg" width="142" height="42" type="image/svg+xml">
+        <img class="main-header__logo" src="img/logotype.svg" width="142" height="42" alt="Логотип сайта Lifetour">
       </picture>
       <a class="main-header__contact-phone" href="tel:88000000000">8 800 000-00-00</a>
     </div>
@@ -96,6 +96,7 @@
     <div data-test="form">form</div>
     <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script> -->
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
