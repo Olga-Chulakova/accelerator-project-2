@@ -1,0 +1,26 @@
+.menu__button {
+    width: 26px;
+    height: 20px;
+    border: none;
+}
+
+.menu__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu__link {
+    font-size: $font-size-14;
+    line-height: 14px;
+    font-weight: 700;
+    color: $color-accent;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media (min-width: $desktop) {
+        text-transform: capitalize;
+    }
+}

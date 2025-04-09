@@ -2,3 +2,13 @@
   background-color: #0266c1;
   padding: 15px 0;
 }
+
+.main-header__contact-phone {
+  font-family: inherit;
+  font-size: $font-size-16;
+  line-height: 16px;
+  font-weight: 600;
+  color: $color-accent;
+  display: block;
+  text-decoration: none;
+}

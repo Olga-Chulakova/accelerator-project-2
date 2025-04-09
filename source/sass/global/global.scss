@@ -6,6 +6,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: $color-accent;
+  font-family: $montserrat;
+  font-weight: 400;
+  color: $color-basis;
 }
 
 img {
