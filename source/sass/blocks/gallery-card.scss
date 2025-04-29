@@ -32,12 +32,17 @@
 
 .gallery-card__image-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 157px;
   grid-template-rows: auto 1fr;
   row-gap: 6px;
 
   @media (min-width: $tablet) {
+    grid-template-columns: 252px;
     gap: 7px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 284px;
   }
 }
 

@@ -22,29 +22,29 @@
             <img class="header__logo-image" src="img/logo-header.svg" width="142" height="42" alt="Логотип сайта Lifetour">
           </picture>
         </a>
-        <a class="header__contact-phone" href="tel:88000000000">8 800 000-00-00</a>
         <div class="header__nav menu menu--hidden">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">Туры</a>
+              <a class="menu__link" href="#tours">Туры</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Обучение</a>
+              <a class="menu__link" href="#training">Обучение</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">О нас</a>
+              <a class="menu__link" href="#about">О нас</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Отзывы</a>
+              <a class="menu__link" href="#reviews">Отзывы</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Фотографии</a>
+              <a class="menu__link" href="#gallery">Фотографии</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>
+        <a class="header__contact-phone" href="tel:88000000000">8 800 000-00-00</a>
       </div>
     </nav>
   </header>
@@ -117,12 +117,14 @@
         <div class="hero-swiper__pagination swiper-pagination"></div>
       </div>
     </section>
-    <section class="tours" data-test="tours">
+    <section class="tours" data-test="tours" id="tours">
       <div class="tours__wrapper container">
-        <h2 class="tours__title title" data-title="Ближайшие туры" aria-hidden="true">Ближайшие туры</h2>
-        <div class="tours__buttons">
-          <button class="tours__slider-button tours__slider-button--prev swiper-button-prev" type="button" aria-label="Назад"></button>
-          <button class="tours__slider-button tours__slider-button--next swiper-button-next" type="button" aria-label="Вперед"></button>
+        <div class="tours__controll-wrapper">
+          <h2 class="tours__title title" data-title="Ближайшие туры" aria-hidden="true">Ближайшие туры</h2>
+          <div class="tours__buttons">
+            <button class="tours__slider-button tours__slider-button--prev swiper-button-prev" type="button" aria-label="Назад"></button>
+            <button class="tours__slider-button tours__slider-button--next swiper-button-next" type="button" aria-label="Вперед"></button>
+          </div>
         </div>
         <div class="tours__slider-wrapper tours-card swiper">
           <ul class="tours-card__list swiper-wrapper">
@@ -266,7 +268,7 @@
         </div>
       </div>
     </section>
-    <section class="training" data-test="training">
+    <section class="training" data-test="training" id="training">
       <div class="training__wrapper container">
         <h2 class="training__title title" data-title="Обучение" aria-hidden="true">Обучение</h2>
         <p class="training__text">Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
@@ -379,7 +381,7 @@
         </div>
       </div>
     </section>
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__big-wrapper">
         <div class="about__wrapper">
           <h2 data-title="О нас" aria-hidden="true">О нас</h2>
@@ -396,7 +398,7 @@
         </div>
       </div>
     </section>
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__wrapper">
         <div class="reviews__title-wrapper">
           <h2 class="reviews__title title" data-title="Отзывы" aria-hidden="true">Отзывы</h2>
@@ -536,7 +538,7 @@
         </div>
       </div>
     </section>
-    <section class="gallery" data-test="gallery">
+    <section class="gallery" data-test="gallery" id="gallery">
       <div class="gallery__text-wrapper container">
         <h2 class="gallery__title title" data-title="Фотогалерея" aria-hidden="true">Фотогалерея</h2>
         <div class="gallery__controls-wrapper">
@@ -645,7 +647,7 @@
     </section>
   </main>
   <footer class="main-footer" data-test="footer">
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__general-wrapper">
         <div class="contacts__text-wrapper">
           <h2 class="contacts__title title" data-title="Контакты" aria-hidden="true">Контакты</h2>
@@ -698,22 +700,22 @@
           <div class="company__nav navigation">
             <ul class="navigation__list">
               <li class="navigation__item navigation__item--tours">
-                <a class="navigation__link" href="#">Туры</a>
+                <a class="navigation__link" href="#tours">Туры</a>
               </li>
               <li class="navigation__item navigation__item--training">
-                <a class="navigation__link" href="#">Обучение</a>
+                <a class="navigation__link" href="#training">Обучение</a>
               </li>
               <li class="navigation__item navigation__item--about">
-                <a class="navigation__link" href="#">О нас</a>
+                <a class="navigation__link" href="#about">О нас</a>
               </li>
               <li class="navigation__item navigation__item--reviews">
-                <a class="navigation__link" href="#">Отзывы</a>
+                <a class="navigation__link" href="#riviews">Отзывы</a>
               </li>
               <li class="navigation__item navigation__item--gallery">
-                <a class="navigation__link" href="#">Фотографии</a>
+                <a class="navigation__link" href="#gallery">Фотографии</a>
               </li>
               <li class="navigation__item navigation__item--contacts">
-                <a class="navigation__link" href="#">Контакты</a>
+                <a class="navigation__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>

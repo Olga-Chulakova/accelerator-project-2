@@ -7,36 +7,20 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 42px 0;
+    padding: 32px 0;
   }
 }
 
 .main-header__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 1fr auto;
 
   @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-  }
-}
-
-.main-header__contact-phone {
-  font-size: $font-size-14;
-  line-height: 14px;
-  font-weight: 600;
-  color: $color-accent;
-  display: block;
-  text-decoration: none;
-  margin-left: auto;
-
-  @media (min-width: $tablet) {
-    font-size: $font-size-16;
-    line-height: 16px;
-    margin-left: 0;
   }
 
   @media (min-width: $desktop) {
-    order: 2;
+    grid-template-columns: 205px auto 159px;
   }
 }

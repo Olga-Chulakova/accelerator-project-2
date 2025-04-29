@@ -31,8 +31,9 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("/__spritemap#sprite-pin-filled-view");
-    background-repeat: no-repeat;
+    mask-image: url("/__spritemap#sprite-pin-filled-view");
+    mask-repeat: no-repeat;
+    background-color: $color-accent;
     width: 9px;
     height: 12px;
     top: 50%;
