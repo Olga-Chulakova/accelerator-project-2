@@ -1,0 +1,158 @@
+.contact-info__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+
+.contact-info__item {
+  padding-left: 32px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-left: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 56px;
+  }
+}
+
+.contact-info__item--phone::before {
+  content: "";
+  position: absolute;
+  background-image: url("/__spritemap#sprite-phone-view");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 1px;
+  left: 1px;
+
+  @media (min-width: $tablet) {
+    width: 24px;
+    height: 23px;
+    top: 1px;
+    left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 25px;
+    height: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.contact-info__item--mail::before {
+  content: "";
+  position: absolute;
+  background-image: url("/__spritemap#sprite-mail-view");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 16px;
+  top: 4px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    width: 24px;
+    height: 19px;
+    top: 3px;
+    left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 26px;
+    height: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.contact-info__item--adress::before {
+  content: "";
+  position: absolute;
+  background-image: url("/__spritemap#sprite-pin-stroke-view");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 21px;
+  top: 1px;
+  left: 3px;
+
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 24px;
+    top: 0;
+    left: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 20px;
+    height: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+  }
+}
+
+
+.contact-info__subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0 0 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 1px 0 5px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 8px;
+  }
+}
+
+.contact-info__text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+  color: $color-basis;
+
+  @media (min-width: $tablet) {
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.contact-info__adress br {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

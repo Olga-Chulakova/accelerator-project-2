@@ -1,0 +1,135 @@
+.reviews-card__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.reviews-card__item {
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
+
+  @media (min-width: $tablet) {
+    padding: 20px 30px 20px 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 20px 40px 20px 20px;
+  }
+}
+
+.reviews-card__item.swiper-slide {
+  @media (min-width: $tablet) {
+    width: auto;
+  }
+}
+
+.reviews-card__card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    align-items: flex-start;
+  }
+}
+
+.reviews-card__image-wrapper {
+  width: 250px;
+  height: 169px;
+  overflow: hidden;
+
+  @media (width >= 768px) {
+    width: 186px;
+    height: 237px;
+  }
+
+  @media (width >= 1440px) {
+    width: 258px;
+    height: 253px;
+  }
+}
+
+.reviews-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews-card__text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: $tablet) {
+    width: 299px;
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 352px;
+    gap: 2px;
+  }
+}
+
+.reviews-card__text-content p {
+  font-size: $font-size-12;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: $desktop) {
+    font-size: $font-size-14;
+    line-height: 22px;
+  }
+}
+
+.reviews-card__text-content p + p {
+  margin-top: 10px;
+}
+
+.reviews-card__person-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: $tablet) {
+    gap: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 8px;
+  }
+}
+
+.reviews-card__name {
+  font-size: $font-size-12;
+  line-height: 12px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-13;
+    line-height: 13px;
+  }
+}
+
+.reviews-card__city {
+  font-size: $font-size-12;
+  line-height: 12px;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+}

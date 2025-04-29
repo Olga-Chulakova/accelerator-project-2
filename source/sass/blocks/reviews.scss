@@ -1,0 +1,131 @@
+.reviews {
+  padding: 20px 0;
+
+  @media (min-width: $tablet) {
+    padding: 40px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0 87px;
+  }
+}
+
+.reviews__wrapper {
+  width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    margin: 0 0 0 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 0 120px;
+  }
+}
+
+.reviews__title-wrapper {
+  margin: 0 auto 15px 0;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 678px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1200px;
+    margin: 0 auto 38px 0;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+}
+
+.reviews__title.title {
+  @media (min-width: $desktop) {
+    padding: 45px 0 0;
+  }
+}
+
+.reviews__buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reviews__slider-button.swiper-button-prev,
+.reviews__slider-button.swiper-button-next {
+  width: 37px;
+  height: 35px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  background-color: $color-additional;
+  display: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 9px;
+    mask: url("/__spritemap#sprite-big-arrow-view");
+    background-color: $color-accent;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease-in-out;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: #1c3374;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #1c3374;
+    border-color: transparent;
+  }
+
+  &:not(:disabled):hover::before,
+  &:not(:disabled):focus::before,
+  &:not(:disabled):focus-visible::before {
+    background-color: #1c3374;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $color-accent;
+  }
+
+  &:disabled {
+    background-color: #999999;
+    border-color: transparent;
+  }
+
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.reviews__slider-button--next.swiper-button-next {
+  transform: rotate(-180deg);
+}

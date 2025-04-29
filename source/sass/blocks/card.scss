@@ -1,0 +1,191 @@
+// .card {
+//   width: 250px;
+//   margin: 0 auto;
+//   top: 224px;
+//   left: 0;
+//   right: 0;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto 15px auto 31px auto;
+// }
+
+.card__wrapper-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 12px;
+  align-items: center;
+  grid-row: 1 /2;
+}
+
+.card__place {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: $color-accent;
+  padding: 8px 12px 8px 34px;
+  background-color: $color-additional;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/__spritemap#sprite-pin-filled-view");
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+  }
+}
+
+.card__period {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.card__period-day {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: $color-accent;
+  padding: 4px 0 4px 32px;
+  background-color: transparent;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/__spritemap#sprite-sun-view");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.card__period-night {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: $color-accent;
+  padding: 4px 0 4px 32px;
+  background-color: transparent;
+  box-sizing: border-box;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/__spritemap#sprite-moon-view");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.card__name-tour {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $color-accent;
+  margin: 0;
+  grid-row: 3 / 4;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: $color-accent;
+    opacity: 20%;
+    bottom: -15px;
+    left: 0;
+  }
+}
+
+.card__details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-row: 5 / 6;
+}
+
+.card__difficulty {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  width: 84px;
+  color: $color-accent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__wrapper-star {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.card__stars.checked {
+  background-image: url("/__spritemap#sprite-star-view");
+  background-repeat: no-repeat;
+  display: block;
+  width: 16px;
+  height: 14px;
+}
+
+.card__stars {
+  background-image: url("/__spritemap#sprite-star-stroke-view");
+  background-repeat: no-repeat;
+  display: block;
+  width: 16px;
+  height: 14px;
+}
+
+.card__date {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  color: $color-accent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card__date-number {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  color: $color-accent;
+}
+
+.card__group {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  color: $color-accent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card__group-number {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  color: $color-accent;
+}

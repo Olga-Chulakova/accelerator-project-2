@@ -1,0 +1,20 @@
+// .swiper-pagination  {
+//   width: 16px;
+//   height: 16px;
+// }
+
+// .swiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+//   margin: 0;
+//   margin-right: 20px;
+// }
+
+.swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 40px;
+
+  @media (min-width: $desktop) {
+    bottom: 92px;
+    width: 1200px;
+    margin: 0 auto;
+    right: 0;
+  }
+}

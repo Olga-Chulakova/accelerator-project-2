@@ -3,9 +3,6 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-const buttonMenu = document.querySelector('.menu__button');
-const menu = document.querySelector('.menu__nav');
-
-buttonMenu.onclick = () => {
-  menu.classList.toggle('active');
-};
+import './open-menu.js';
+import './swiper.js';
+import './form-validation.js';

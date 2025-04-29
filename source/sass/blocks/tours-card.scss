@@ -1,0 +1,47 @@
+.tours-card__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.tours-card__item.swiper-slide {
+  min-height: 416px;
+}
+
+.tours-card__item-wrapper {
+  min-height: 416px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tours-card__wrapper-image {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.tours-card__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.tours-card__wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 15px auto 31px auto;
+
+  @media (min-width: $tablet) {
+    width: 290px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 340px;
+  }
+}

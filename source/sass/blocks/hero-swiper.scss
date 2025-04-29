@@ -1,0 +1,186 @@
+// .hero-swiper .swiper-pagination .swiper-pagination-bullet {
+//   margin-left: 20px;
+// }
+
+.hero-swiper__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hero-swiper__item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-23deg, rgba(15, 20, 41, 0) 0%, rgba(15, 20, 41, 0.5) 50%, rgba(15, 20, 41, 1) 100%);
+    opacity: 33%;
+    pointer-events: none;
+  }
+}
+
+.hero-swiper__item.swiper-slide {
+  height: 568px;
+
+  @media (min-width: $tablet) {
+    height: 1034px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 800px;
+  }
+}
+
+.hero-swiper__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-swiper__text-card {
+  position: absolute;
+  top: 144px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+
+  @media (min-width: $tablet) {
+    top: 342px;
+    width: 678px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 200px;
+    width: 1200px;
+  }
+}
+
+.hero-swiper__text-card--kamchatka {
+  top: 134px;
+
+  @media (min-width: $tablet) {
+    top: 137px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 200px;
+  }
+}
+
+.hero-swiper__text-card--altai {
+  @media (max-width: $mobile) {
+    top: 122px;
+  }
+}
+
+.hero-swiper__text-card h1 {
+  font-size: $font-size-26;
+  line-height: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 15px;
+  color: $color-accent;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-56;
+    line-height: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: $font-size-77;
+    line-height: 77px;
+    margin: 0 0 25px;
+    text-align: left;
+    width: auto;
+  }
+}
+
+.hero-swiper__text-card p {
+  font-size: $font-size-15;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 60px;
+  color: $color-accent;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-17;
+    line-height: 24px;
+    margin: 0 auto 35px;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 464px;
+    text-align: left;
+    margin: 0 0 35px;
+  }
+}
+
+.hero-swiper__link {
+  width: 180px;
+  height: 56px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.hero-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $desktop) {
+    justify-content: flex-end;
+  }
+}
+
+.hero-swiper__bullet {
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid $color-accent;
+  box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background-color: #d9d9d9;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+  }
+
+  &:active:not(:focus),
+  &:active:not(:hover) {
+    background-color: transparent;
+  }
+}
+
+.hero-swiper__bullet.hero-swiper__bullet--active {
+  background-color: $color-accent;
+}

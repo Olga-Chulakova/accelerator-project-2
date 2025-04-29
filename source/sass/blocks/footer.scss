@@ -1,0 +1,38 @@
+.footer {
+  padding: 23px 0 20px;
+  border-top: 1px solid rgba(45, 56, 63, 0.2);
+
+  @media (min-width: $tablet) {
+    padding: 34px 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px 0;
+  }
+}
+
+.footer__general-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 23px;
+
+  @media (min-width: $tablet) {
+    gap: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 22px;
+  }
+}
+
+.footer__privacy-link {
+  font-size: $font-size-12;
+  line-height: 12px;
+  font-weight: 300;
+  color: $color-basis;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}

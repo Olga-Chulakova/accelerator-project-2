@@ -1,70 +1,46 @@
-.menu {
-  @media (min-width: $desktop) {
-    order: 1;
+.main-nav--closed .menu {
+  display: none;
+}
+
+@media (width >= 1440px) {
+  .main-nav--closed .menu {
+    display: block; /* На десктопе всегда отображаем */
   }
 }
 
-.menu__button {
-  width: 26px;
-  height: 26px;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  position: relative;
-  display: block;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("/__spritemap#sprite-menu-view");
-    width: 26px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  @media (min-width: $desktop) {
-    display: none;
-  }
-}
-
-.menu__nav {
-  // display: none;
-
-  @media (max-width: $tablet) {
-    display: none;
-    position: absolute;
-    top: -100%;
-    padding: 100px 15px;
-    left: 0;
-    background-color: #0266c1;
-    z-index: -1;
-  }
-
-  @media (min-width: $desktop) {
-    display: block;
-  }
-}
-
-.menu__nav.active {
-  display: block;
+.main-nav--opened .menu {
+  display: block; /* Отображаем при нажатии кнопки */
+  position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  padding: 100px 0 50px;
+  min-height: 200px;
+  background-color: #0266c1;
+
+  @media (min-width: $tablet) {
+    padding: 92px 0 70px;
+  }
 }
 
 .menu__list {
   padding: 0;
-  margin: 0;
   list-style-type: none;
+  width: 290px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 22px;
 
   @media (min-width: $tablet) {
     gap: 26px;
+    width: 678px;
   }
 
   @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
   }
@@ -78,12 +54,16 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.04em;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-16;
+    line-height: 16px;
+  }
 
   @media (min-width: $desktop) {
     text-transform: capitalize;
-    font-size: $font-size-16;
-    line-height: 16px;
     font-weight: 400;
+    letter-spacing: 0;
   }
 }
