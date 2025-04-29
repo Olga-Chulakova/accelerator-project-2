@@ -1,12 +1,24 @@
 .gallery {
-  padding-top: 20px;
+  padding: 20px 0 3px;
 
   @media (min-width: $tablet) {
-    padding-top: 40px;
+    padding: 40px 0 3px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 100px;
+    padding: 100px 0 3px;
+  }
+}
+
+.gallery__text-wrapper {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 46px;
   }
 }
 
@@ -143,3 +155,4 @@
 .gallery__slider-button--next.swiper-button-next {
   transform: rotate(-180deg);
 }
+

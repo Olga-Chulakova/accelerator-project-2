@@ -6,3 +6,5 @@
 import './open-menu.js';
 import './swiper.js';
 import './form-validation.js';
+import './gallery-swiper.js';
+

@@ -2,6 +2,9 @@
   position: relative;
   width: 100%;
   min-height: 638px;
+  box-sizing: border-box;
+  padding-top: 174px;
+  padding-bottom: 174px;
 
   &::before {
     content: "";
@@ -37,10 +40,14 @@
 
   @media (min-width: $tablet) {
     min-height: 680px;
+    padding-top: 183px;
+    padding-bottom: 183px;
   }
 
   @media (min-width: $desktop) {
     min-height: 760px;
+    padding-top: 292px;
+    padding-bottom: 292px;
   }
 }
 
@@ -50,8 +57,6 @@
   display: grid;
   grid-template-rows: auto;
   gap: 20px;
-  position: relative;
-  top: 174px;
 
 
   @media (min-width: $tablet) {
