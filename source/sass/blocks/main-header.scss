@@ -1,14 +1,5 @@
 .main-header {
   background-color: #0266c1;
-  padding: 15px 0 14px;
-
-  @media (min-width: $tablet) {
-    padding: 20px 0;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 32px 0;
-  }
 }
 
 .main-header__container {
