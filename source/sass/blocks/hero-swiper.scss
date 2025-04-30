@@ -8,6 +8,18 @@
   list-style-type: none;
 }
 
+.hero-swiper__list.swiper-wrapper {
+  min-height: 568px;
+
+  @media (min-width: $tablet) {
+    min-height: 1034px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 800px;
+  }
+}
+
 .hero-swiper__item {
   width: 100%;
   overflow: hidden;
@@ -25,15 +37,23 @@
   }
 }
 
-.hero-swiper__item.swiper-slide {
-  height: 568px;
+.hero-swiper__wrapper-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.hero-swiper__image-wrapper {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+  min-height: 568px;
 
   @media (min-width: $tablet) {
-    height: 1034px;
+    min-height: 1034px;
   }
 
   @media (min-width: $desktop) {
-    height: 800px;
+    min-height: 800px;
   }
 }
 
@@ -45,38 +65,20 @@
 }
 
 .hero-swiper__text-card {
-  position: absolute;
-  top: 144px;
-  left: 50%;
-  transform: translateX(-50%);
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
   width: 290px;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet) {
-    top: 342px;
     width: 678px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: $desktop) {
-    top: 200px;
     width: 1200px;
-  }
-}
-
-.hero-swiper__text-card--kamchatka {
-  top: 134px;
-
-  @media (min-width: $tablet) {
-    top: 137px;
-  }
-
-  @media (min-width: $desktop) {
-    top: 200px;
-  }
-}
-
-.hero-swiper__text-card--altai {
-  @media (max-width: $mobile) {
-    top: 122px;
   }
 }
 
@@ -124,9 +126,33 @@
   }
 }
 
+.hero-swiper__text-card.hero-swiper__text-card--kamchatka p {
+  margin-left: -3px;
+
+  // @media (min-width: $tablet) {
+  //   top: 137px;
+  // }
+
+  // @media (min-width: $desktop) {
+  //   top: 200px;
+  // }
+}
+
+.hero-swiper__text-card.hero-swiper__text-card--altai p {
+  margin-left: -2px;
+
+  @media (max-width: $mobile) {
+    // top: 122px;
+  }
+}
+
+.hero-swiper__text-card.hero-swiper__text-card--altai h1 {
+  margin: 0 0 14px;
+}
+
 .hero-swiper__link {
   width: 180px;
-  height: 56px;
+  min-height: 56px;
   margin: 0 auto;
 
   @media (min-width: $desktop) {
