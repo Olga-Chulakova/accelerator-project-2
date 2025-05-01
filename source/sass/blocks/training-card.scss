@@ -116,6 +116,14 @@
 
 .training-card__slider-button--next.swiper-button-next {
   transform: rotate(-180deg);
+
+  @media (min-width: $tablet) {
+    margin-top: 1px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
 }
 
 .training-card__list {
@@ -199,6 +207,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: $tablet) {
+    margin-right: -1px;
   }
 
   &:hover {
