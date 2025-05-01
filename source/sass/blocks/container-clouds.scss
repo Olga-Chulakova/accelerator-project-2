@@ -1,4 +1,4 @@
-.main-container {
+.container-clouds {
   position: relative;
   overflow: hidden;
 
@@ -14,7 +14,7 @@
       );
     width: 1182px;
     height: 784px;
-    top: 575px;
+    top: 8px;
     left: calc(50% + 19px);
     background-size: cover; /* Или cover, если нужно заполнить всю область */
     background-position: left; /* Выравниваем по правому нижнему углу */
@@ -31,8 +31,8 @@
         );
       width: 2055px;
       height: 1627px;
-      top: 955px;
-      left: calc(50% + 19px);
+      top: -89px;
+      left: calc(50% - 44px);
     }
 
     @media (min-width: $desktop) {
@@ -45,8 +45,8 @@
         );
       width: 2055px;
       height: 1630px;
-      top: 674px;
-      left: calc(50% + 19px);
+      top: -126px;
+      left: calc(50% + 118px);
     }
   }
 }

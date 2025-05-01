@@ -1,16 +1,15 @@
 .training-card__title-wrapper {
   position: relative;
-  margin: 0 0 25px;
+  margin: 0 0 21px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   @media (min-width: $tablet) {
-    margin: 0 0 30px;
+    margin: 0 0 29px;
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
   }
 }
 
@@ -24,11 +23,13 @@
   @media (min-width: $tablet) {
     font-size: 25px;
     line-height: 25px;
+    padding-top: 5px;
   }
 
   @media (min-width: $desktop) {
     font-size: 35px;
     line-height: 35px;
+    padding-top: 6px;
   }
 }
 
@@ -36,6 +37,12 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  padding-top: 2px;
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    margin-top: -1px;
+  }
 }
 
 .training-card__slider-button.swiper-button-prev,
@@ -118,9 +125,13 @@
 }
 
 .training-card__item {
-  padding: 15px;
+  padding: 15px 16px 15px 14px;
   box-sizing: border-box;
   border: 1px solid rgba(2, 102, 193, 0.1);
+
+  @media (min-width: $desktop) {
+    padding: 14px 16px 14px 14px;
+  }
 }
 
 .training-card__item.swiper-slide {
@@ -165,6 +176,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
+  padding-top: 1px;
 }
 
 .training-card__link-social {
@@ -174,6 +186,7 @@
   box-sizing: border-box;
   position: relative;
   background-color: transparent;
+  margin-right: -2px;
 
   &::after {
     content: "";
@@ -223,4 +236,5 @@
   line-height: 16px;
   font-weight: 400;
   margin: 0;
+  margin-top: -1px;
 }

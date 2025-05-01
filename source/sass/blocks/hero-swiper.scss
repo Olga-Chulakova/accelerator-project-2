@@ -71,6 +71,7 @@
   justify-self: center;
   align-self: center;
   margin-bottom: 16px;
+  z-index: 10;
 
   @media (min-width: $tablet) {
     width: 678px;

@@ -1,21 +1,10 @@
-// .card {
-//   width: 250px;
-//   margin: 0 auto;
-//   top: 224px;
-//   left: 0;
-//   right: 0;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: auto 15px auto 31px auto;
-// }
-
 .card__wrapper-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 12px;
   align-items: center;
-  grid-row: 1 /2;
+  margin-bottom: 15px;
 }
 
 .card__place {
@@ -91,7 +80,7 @@
     height: 16px;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left: 1px;
   }
 }
 
@@ -100,9 +89,9 @@
   line-height: 28px;
   font-weight: 700;
   color: $color-accent;
-  margin: 0;
-  grid-row: 3 / 4;
+  margin: 0 0 31px;
   position: relative;
+  word-break: break-word;
 
   &::after {
     content: "";
@@ -114,6 +103,11 @@
     bottom: -15px;
     left: 0;
   }
+
+
+  @media (min-width: $desktop) {
+    width: 85%;
+  }
 }
 
 .card__details {
@@ -121,7 +115,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  grid-row: 5 / 6;
 }
 
 .card__difficulty {
