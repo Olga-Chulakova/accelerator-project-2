@@ -16,9 +16,9 @@
     height: 784px;
     top: 8px;
     left: calc(50% + 19px);
-    background-size: cover; /* Или cover, если нужно заполнить всю область */
-    background-position: left; /* Выравниваем по правому нижнему углу */
-    background-repeat: no-repeat; /* Чтобы картинка не повторялась */
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
     z-index: -1;
 
     @media (min-width: $tablet) {
