@@ -123,25 +123,25 @@ import 'swiper/css/pagination';
 
 // trainingSwiper.init();
 
-// const reviewsSwiper = new Swiper ('.reviews-card', {
-//   modules: [Navigation, Mousewheel],
-//   allowTouchMove: true,
-//   slidesPerView: 'auto',
-//   spaceBetween: 30,
-//   breakpoints: {
-//     1440: {
-//       spaceBetween: 120,
-//     }
-//   },
-//   navigation: {
-//     nextEl: '.reviews__slider-button--next',
-//     prevEl: '.reviews__slider-button--prev',
-//   },
-//   simulateTouch: true,
-//   touchRatio: 1,
-// });
+const reviewsSwiper = new Swiper ('.reviews-card', {
+  modules: [Navigation, Mousewheel],
+  allowTouchMove: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  breakpoints: {
+    1440: {
+      spaceBetween: 120,
+    }
+  },
+  navigation: {
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
+  },
+  simulateTouch: true,
+  touchRatio: 1,
+});
 
-// reviewsSwiper.init();
+reviewsSwiper.init();
 
 
 let swiperInstance = null;
