@@ -31,6 +31,18 @@
 }
 
 .gallery-card__image-wrapper {
+  height: 266px;
+
+  @media (min-width: $tablet) {
+    height: 418px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 463px;
+  }
+}
+
+.gallery-card__image-wrapper--dual {
   display: grid;
   grid-template-columns: 157px;
   grid-template-rows: auto 1fr;
@@ -49,4 +61,5 @@
 .gallery-card__image {
   display: block;
   object-fit: cover;
+  height: 100%;
 }
