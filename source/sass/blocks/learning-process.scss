@@ -13,7 +13,7 @@
   @media (min-width: $desktop) {
     font-size: 21px;
     line-height: 21px;
-    margin: 0 0 18px;
+    margin: 0 0 19px;
     margin-top: -1px;
   }
 }
@@ -43,7 +43,7 @@
 
     @media (min-width: $desktop) {
       display: block;
-      bottom: 11px;
+      bottom: 12px;
       top: 0;
       transform: none;
       left: 34px;
@@ -92,7 +92,7 @@
       top: auto;
       transform: none;
       bottom: 0;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
   }
 
@@ -118,6 +118,14 @@
   }
 }
 
+.learning-process__item.learning-process__item--mountain {
+  &::before {
+    @media (min-width: $desktop) {
+      left: 21px;
+    }
+  }
+}
+
 .learning-process__item--map {
   &::after {
     content: "";
@@ -137,8 +145,8 @@
     @media (min-width: $desktop) {
       top: 10px;
       left: 10px;
-      width: 25.5px;
-      height: 25.5px;
+      width: 25px;
+      height: 25px;
     }
   }
 }
@@ -162,16 +170,14 @@
 
     @media (min-width: $tablet) {
       top: 4px;
-      width: 26px;
-      height: 22px;
-      left: 0;
+      width: 24px;
+      height: 21px;
+      left: 1px;
     }
 
     @media (min-width: $desktop) {
       top: 12px;
       left: 10px;
-      width: 25.2px;
-      height: 21.8px;
     }
   }
 }
@@ -193,9 +199,9 @@
     }
 
     @media (min-width: $desktop) {
-      top: 11px;
+      top: 10px;
       left: 10px;
-      width: 24.45px;
+      width: 25px;
       height: 25px;
     }
   }

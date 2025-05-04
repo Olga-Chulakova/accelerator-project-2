@@ -4,8 +4,8 @@
 // import 'swiper/css';
 
 // import './open-menu.js';
-// import './swiper.js';
-import './advantages-swiper.js';
+import './swiper.js';
+// import './advantages-swiper.js';
 // import './form-validation.js';
 // import './gallery-swiper.js';
 
