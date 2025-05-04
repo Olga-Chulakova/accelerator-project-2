@@ -5,6 +5,7 @@
 
 // import './open-menu.js';
 // import './swiper.js';
+import './advantages-swiper.js';
 // import './form-validation.js';
-import './gallery-swiper.js';
+// import './gallery-swiper.js';
 

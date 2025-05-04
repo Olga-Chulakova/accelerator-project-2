@@ -99,7 +99,6 @@
 
 .advantages-card__item.advantages-card__item--knowledge {
   position: relative;
-  margin-top: 1px; /* тест */
 
   &::before {
     content: "";
@@ -107,10 +106,6 @@
     background-image: url("/__spritemap#sprite-crown-view");
     background-size: 22px 20px;
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: $tablet) { /* тест */
-    margin-top: 0;
   }
 }
 
@@ -128,7 +123,6 @@
 
 .advantages-card__item.advantages-card__item--routes {
   position: relative;
-  margin-top: 1px; /* тест */
 
   &::before {
     content: "";
@@ -141,18 +135,10 @@
       background-size: 24px 24px;
     }
   }
-
-  @media (min-width: $tablet) {
-    margin-top: 0;
-  }
 }
 
 .advantages-card__item.advantages-card__item--eco {
   position: relative;
-
-  @media (width <= 767px) {
-    padding: 20px 10px 19px;
-  }
 
   &::before {
     content: "";
@@ -160,10 +146,6 @@
     background-image: url("/__spritemap#sprite-leaf-view");
     background-size: 22px 17px;
     background-repeat: no-repeat;
-
-    @media (width <= 767px) {
-      top: 20px;
-    }
   }
 }
 
