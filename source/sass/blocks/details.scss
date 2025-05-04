@@ -4,11 +4,12 @@
   @media (min-width: $desktop) {
     display: flex;
     gap: 10px;
-    position: absolute;
-    bottom: 80px;
-    width: 1200px;
-    left: 50%;
-    transform: translateX(-50%);
+
+    // position: absolute;
+    // bottom: 80px;
+    // width: 1200px;
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 }
 
@@ -18,9 +19,8 @@
   line-height: 16px;
   font-weight: 400;
   color: $color-accent;
-  min-height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 14px 20px 14px 40px;
+  padding: 13px 19px 14px 39px;
   box-sizing: border-box;
   position: relative;
 }

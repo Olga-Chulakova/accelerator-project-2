@@ -3,125 +3,109 @@ import {Navigation, Pagination, Mousewheel} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// const heroSwiper = new Swiper('.hero-swiper', {
-//   modules: [Pagination, Mousewheel],
-//   loop: true,
+const heroSwiper = new Swiper('.hero-slider', {
+  modules: [Pagination, Mousewheel],
+  loop: true,
+  allowTouchMove: true,
+  simulateTouch: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 700,
+  pagination: {
+    el: '.hero-slider .swiper-pagination',
+    type: 'bullets',
+    clickable: false,
+    bulletClass: 'hero-slider__bullet',
+    bulletActiveClass: 'hero-slider__bullet--active',
+    renderBullet: function (index, className) {
+      return `<button class="${className}" tabindex="0" role="button" aria-label="Перейти к слайду ${index + 1}"></button>`;
+    },
+  },
+  breakpoints: {
+    1400: {
+      pagination: {
+        clickable: true,
+      },
+      allowTouchMove: false,
+    }
+  },
+  touchRatio: 1,
+
+
+  on: {
+    slideChange: function () {
+      this.slides.forEach((slide, index) => {
+        const isActive = index === this.activeIndex;
+        slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
+          .forEach((el) => {
+            el.tabIndex = isActive ? 0 : -1;
+          });
+      });
+    },
+  },
+
+});
+
+heroSwiper.init();
+
+// const toursSwiper = new Swiper ('.tours-card', {
+//   modules: [Navigation, Mousewheel],
 //   allowTouchMove: true,
-//   simulateTouch: true,
 //   slidesPerView: 1,
-//   spaceBetween: 10,
-//   pagination: {
-//     el: '.hero-swiper .swiper-pagination',
-//     type: 'bullets',
-//     clickable: false,
-//     bulletClass: 'hero-swiper__bullet',
-//     bulletActiveClass: 'hero-swiper__bullet--active',
-//     renderBullet: function (index, className) {
-//       return `<span class="${className}" tabindex="0" role="button" aria-label="Перейти к слайду ${index + 1}"></span>`;
-//     },
-//   },
+//   slidesPerGroup: 1,
+//   spaceBetween: 18,
 //   breakpoints: {
-//     1400: {
-//       pagination: {
-//         clickable: true,
-//       },
-//       allowTouchMove: false,
+//     320: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//       spaceBetween: 17,
+//     },
+//     1440: {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
 //     }
 //   },
+//   navigation: {
+//     nextEl: '.tours__slider-button--next',
+//     prevEl: '.tours__slider-button--prev',
+//   },
+//   simulateTouch: true,
 //   touchRatio: 1,
-
-
-// on: {
-//   init: function () {
-//     const bullets = document.querySelectorAll('.hero-swiper__bullet');
-//     bullets.forEach((bullet, index) => {
-//       bullet.addEventListener('keydown', (event) => {
-//         if (event.key === 'Enter' || event.key === ' ') {
-//           // Триггерим событие click на буллете
-//           bullet.click();
-//           event.preventDefault(); // Предотвращаем стандартное действие
-//         }
-//       });
-//     });
-//     updateAriaCurrent();
-//   },
-//   slideChange: function () {
-//     updateAriaCurrent();
-//   },
-// },
-
-
 // });
 
-// function updateAriaCurrent() {
-//   const bullets = document.querySelectorAll('.hero-swiper__bullet');
-//   bullets.forEach((bullet, index) => {
-//     if (heroSwiper.activeIndex === index) {
-//       bullet.setAttribute('aria-current', 'true');
-//     } else {
-//       bullet.removeAttribute('aria-current');
+// toursSwiper.init();
+
+// const trainingSwiper = new Swiper ('.training-card__slider-wrapper', {
+//   modules: [Navigation, Mousewheel],
+//   allowTouchMove: true,
+//   slidesPerView: 1,
+//   slidesPerGroup: 1,
+//   spaceBetween: 20,
+//   initialSlide: 0,
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1,
+//       initialSlide: 2,
+//     },
+//     768: {
+//       slidesPerView: 3,
+//       initialSlide: 0,
+//     },
+//     1440: {
+//       slidesPerView: 4,
 //     }
-//   });
-// }
+//   },
+//   navigation: {
+//     nextEl: '.training-card__slider-button--next',
+//     prevEl: '.training-card__slider-button--prev',
+//   },
+//   simulateTouch: true,
+//   touchRatio: 1,
+// });
 
-// heroSwiper.init();
-
-const toursSwiper = new Swiper ('.tours-card', {
-  modules: [Navigation, Mousewheel],
-  allowTouchMove: true,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 18,
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 17,
-    },
-    1440: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    }
-  },
-  navigation: {
-    nextEl: '.tours__slider-button--next',
-    prevEl: '.tours__slider-button--prev',
-  },
-  simulateTouch: true,
-  touchRatio: 1,
-});
-
-const trainingSwiper = new Swiper ('.training-card__slider-wrapper', {
-  modules: [Navigation, Mousewheel],
-  allowTouchMove: true,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 20,
-  initialSlide: 0,
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      initialSlide: 2,
-    },
-    768: {
-      slidesPerView: 3,
-      initialSlide: 0,
-    },
-    1440: {
-      slidesPerView: 4,
-    }
-  },
-  navigation: {
-    nextEl: '.training-card__slider-button--next',
-    prevEl: '.training-card__slider-button--prev',
-  },
-  simulateTouch: true,
-  touchRatio: 1,
-});
-
-trainingSwiper.init();
+// trainingSwiper.init();
 
 // const reviewsSwiper = new Swiper ('.reviews-card', {
 //   modules: [Navigation, Mousewheel],
