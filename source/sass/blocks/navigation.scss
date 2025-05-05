@@ -57,9 +57,71 @@
   display: block;
   text-decoration: none;
   text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 6px);
+    border: 1px solid transparent;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $color-basis;
+    bottom: -3px;
+    width: 100%;
+    display: none;
+  }
 
   @media (min-width: $desktop) {
     font-size: $font-size-16;
     line-height: 16px;
+  }
+
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover:focus::after,
+  &:hover:focus-visible::after {
+    display: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus::after,
+  &:focus-visible::after {
+    border-color: $color-basis;
+  }
+
+  &:active {
+    color: $color-additional;
+  }
+
+  &:active:hover::before {
+    display: none;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[disabled]::after {
+    display: none;
+  }
+
+  &[disabled]::before {
+    display: none;
   }
 }

@@ -37,4 +37,23 @@
     display: block;
     margin-left: auto;
   }
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-additional;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-dark-blue;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    cursor: not-allowed;
+  }
 }

@@ -88,4 +88,23 @@
     line-height: 18px;
     grid-column: 3 / 4;
   }
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-basis;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-dark-blue;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    cursor: not-allowed;
+  }
 }

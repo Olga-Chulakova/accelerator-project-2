@@ -172,21 +172,6 @@
   }
 }
 
-// .error-message {
-//   font-family: $montserrat;
-//   font-size: $font-size-16;
-//   line-height: 16px;
-//   font-weight: 400;
-//   color: $color-basis;
-//   position: absolute;
-//   top: 50%;
-//   left: 15px;
-//   transform: translateY(-50%);
-//   background-color: $color-accent;
-//   height: auto;
-//   padding: 2px 0;
-// }
-
 .form-request__input::placeholder {
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -228,9 +213,9 @@
 
 .form-request__input-submit {
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
   background-color: $color-additional;
-  padding: 22px 19px 20px;
+  padding: 21px 19px 19px;
   box-sizing: border-box;
   font-family: $montserrat;
   font-size: $font-size-16;
@@ -238,12 +223,40 @@
   font-weight: 500;
   color: $color-accent;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: $tablet) {
-    padding: 21px 20px 19px;
+    padding: 20px 20px 19px;
   }
 
   @media (min-width: $desktop) {
     width: 180px;
+  }
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-dark-blue;
+    border: 1px solid $color-dark-blue;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-accent;
+    color: $color-dark-blue;
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+    color: $color-accent;
+    border: 1px solid $color-dark-blue;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    color: $color-accent;
+    border: 1px solid $color-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }

@@ -164,6 +164,7 @@
   padding: 10px 28px 10px 10px;
   position: relative;
   display: inline-block;
+  outline: none;
 
   &::after {
     content: "";
@@ -171,9 +172,10 @@
     margin-left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("/__spritemap#sprite-arrow-view");
-    background-repeat: no-repeat;
-    background-size: cover;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: $color-basis;
     width: 8px;
     height: 15px;
 
@@ -190,5 +192,41 @@
     font-size: 16px;
     line-height: 16px;
     margin-left: -18px;
+  }
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+  }
+
+  &:hover::after {
+    background-color: rgba(2, 102, 193, 0.1);
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-additional;
+  }
+
+  &:focus::after,
+  &:focus-visible::after {
+    background-color: $color-additional;
+  }
+
+  &:active {
+    color: $color-dark-blue;
+  }
+
+  &:active::after {
+    background-color: $color-dark-blue;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[disabled]::after {
+    color: $color-disabled;
   }
 }

@@ -8,3 +8,38 @@
     right: 0;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  &:hover {
+    background-color: transparent;
+    border-color: $color-dark-blue;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+    border-color: transparent;
+  }
+
+  &:not(:disabled):hover::before,
+  &:not(:disabled):focus::before,
+  &:not(:disabled):focus-visible::before {
+    background-color: $color-dark-blue;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $color-accent;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    border-color: transparent;
+  }
+}

@@ -114,7 +114,7 @@
 
   &:hover {
     background-color: transparent;
-    border-color: #1c3374;
+    border-color: $color-dark-blue;
   }
 
   &:focus,
@@ -125,14 +125,14 @@
   }
 
   &:active {
-    background-color: #1c3374;
+    background-color: $color-dark-blue;
     border-color: transparent;
   }
 
   &:not(:disabled):hover::before,
   &:not(:disabled):focus::before,
   &:not(:disabled):focus-visible::before {
-    background-color: #1c3374;
+    background-color: $color-dark-blue;
   }
 
   &:not(:disabled):active::before {
@@ -140,8 +140,9 @@
   }
 
   &:disabled {
-    background-color: #999999;
+    background-color: $color-disabled;
     border-color: transparent;
+    cursor: not-allowed;
   }
 
 
