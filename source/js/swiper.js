@@ -31,7 +31,6 @@ const heroSwiper = new Swiper('.hero-slider', {
   },
   touchRatio: 1,
 
-
   on: {
     slideChange: function () {
       this.slides.forEach((slide, index) => {
@@ -48,142 +47,142 @@ const heroSwiper = new Swiper('.hero-slider', {
 
 heroSwiper.init();
 
-// const toursSwiper = new Swiper ('.tours-card', {
-//   modules: [Navigation, Mousewheel],
-//   allowTouchMove: true,
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
-//   spaceBetween: 18,
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 17,
-//     },
-//     1440: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//     }
-//   },
-//   navigation: {
-//     nextEl: '.tours__slider-button--next',
-//     prevEl: '.tours__slider-button--prev',
-//   },
-//   simulateTouch: true,
-//   touchRatio: 1,
-// });
+const toursSwiper = new Swiper ('.tours-card', {
+  modules: [Navigation, Mousewheel],
+  allowTouchMove: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 18,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 17,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  },
+  navigation: {
+    nextEl: '.tours__slider-button--next',
+    prevEl: '.tours__slider-button--prev',
+  },
+  simulateTouch: true,
+  touchRatio: 1,
+});
 
-// toursSwiper.init();
+toursSwiper.init();
 
-// const trainingSwiper = new Swiper ('.training-card__slider-wrapper', {
-//   modules: [Navigation, Mousewheel],
-//   allowTouchMove: true,
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
-//   spaceBetween: 20,
-//   initialSlide: 0,
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       initialSlide: 2,
-//     },
-//     768: {
-//       slidesPerView: 3,
-//       initialSlide: 0,
-//     },
-//     1440: {
-//       slidesPerView: 4,
-//     }
-//   },
-//   navigation: {
-//     nextEl: '.training-card__slider-button--next',
-//     prevEl: '.training-card__slider-button--prev',
-//   },
-//   simulateTouch: true,
-//   touchRatio: 1,
-// });
+const trainingSwiper = new Swiper ('.training-card__slider-wrapper', {
+  modules: [Navigation, Mousewheel],
+  allowTouchMove: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  initialSlide: 0,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      initialSlide: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      initialSlide: 0,
+    },
+    1440: {
+      slidesPerView: 4,
+    }
+  },
+  navigation: {
+    nextEl: '.training-card__slider-button--next',
+    prevEl: '.training-card__slider-button--prev',
+  },
+  simulateTouch: true,
+  touchRatio: 1,
+});
 
-// trainingSwiper.init();
+trainingSwiper.init();
 
-// const reviewsSwiper = new Swiper ('.reviews-card', {
-//   modules: [Navigation, Mousewheel],
-//   allowTouchMove: true,
-//   slidesPerView: 'auto',
-//   spaceBetween: 30,
-//   breakpoints: {
-//     1440: {
-//       spaceBetween: 120,
-//     }
-//   },
-//   navigation: {
-//     nextEl: '.reviews__slider-button--next',
-//     prevEl: '.reviews__slider-button--prev',
-//   },
-//   simulateTouch: true,
-//   touchRatio: 1,
-// });
+const reviewsSwiper = new Swiper ('.reviews-card', {
+  modules: [Navigation, Mousewheel],
+  allowTouchMove: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  breakpoints: {
+    1440: {
+      spaceBetween: 120,
+    }
+  },
+  navigation: {
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
+  },
+  simulateTouch: true,
+  touchRatio: 1,
+});
 
-// reviewsSwiper.init();
+reviewsSwiper.init();
 
 
-// let swiperInstance = null;
-// let originalSwiperDivs = null;
+let swiperInstance = null;
+let originalSwiperDivs = null;
 
-// function initSwiper() {
-//   const swiperWrapperDiv = document.querySelector('.advantages__card-wrapper .swiper-wrapper');
-//   const slideDivs = document.querySelectorAll('.advantages__card-wrapper .swiper-slide');
-//   originalSwiperDivs = slideDivs;
-//   slideDivs.forEach((slideDiv) => {
-//     const duplicateSlide = slideDiv.cloneNode(true);
-//     swiperWrapperDiv.appendChild(duplicateSlide);
-//   });
-//   //const realSlidesCount = slideDivs.length;
-//   swiperInstance = new Swiper('.advantages__card-wrapper', {
-//     modules: [Navigation, Mousewheel],
-//     direction: 'horizontal',
-//     slidesPerGroup: 2,
-//     //initialSlide: 2,
-//     slidesPerView: 'auto',
+function initSwiper() {
+  const swiperWrapperDiv = document.querySelector('.advantages__card-wrapper .swiper-wrapper');
+  const slideDivs = document.querySelectorAll('.advantages__card-wrapper .swiper-slide');
+  originalSwiperDivs = slideDivs;
+  slideDivs.forEach((slideDiv) => {
+    const duplicateSlide = slideDiv.cloneNode(true);
+    swiperWrapperDiv.appendChild(duplicateSlide);
+  });
+  //const realSlidesCount = slideDivs.length;
+  swiperInstance = new Swiper('.advantages__card-wrapper', {
+    modules: [Navigation, Mousewheel],
+    direction: 'horizontal',
+    slidesPerGroup: 2,
+    //initialSlide: 2,
+    slidesPerView: 'auto',
 
-//     spaceBetween: 30,
-//     //loopedSlidesLimit: null,
-//     loopAdditionalSlides: 1,
-//     //loopedSlides: realSlidesCount,
-//     //slidesOffsetBefore: -290,
-//     //centeredSlides: 'auto',
-//     //observer: true,
-//     loop: true,
-//     speed: 700,
-//     //loopedSlides: 3.2,
-//     navigation: {
-//       nextEl: '.advantages__slider-button--next',
-//       prevEl: '.advantages__slider-button--prev',
-//     },
-//   });
-// }
+    spaceBetween: 30,
+    //loopedSlidesLimit: null,
+    loopAdditionalSlides: 1,
+    //loopedSlides: realSlidesCount,
+    //slidesOffsetBefore: -290,
+    //centeredSlides: 'auto',
+    //observer: true,
+    loop: true,
+    speed: 700,
+    //loopedSlides: 3.2,
+    navigation: {
+      nextEl: '.advantages__slider-button--next',
+      prevEl: '.advantages__slider-button--prev',
+    },
+  });
+}
 
-// function destroySwiper() {
-//   if (swiperInstance) {
-//     swiperInstance.destroy(true, true);
-//     swiperInstance = null;
+function destroySwiper() {
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+    swiperInstance = null;
 
-//     const swiperWrapperDiv = document.querySelector('.advantages__card-wrapper .swiper-wrapper');
-//     swiperWrapperDiv.replaceChildren(...originalSwiperDivs);
-//     originalSwiperDivs = null;
-//   }
-// }
+    const swiperWrapperDiv = document.querySelector('.advantages__card-wrapper .swiper-wrapper');
+    swiperWrapperDiv.replaceChildren(...originalSwiperDivs);
+    originalSwiperDivs = null;
+  }
+}
 
-// function checkSwiper() {
-//   if (window.innerWidth >= 1440) {
-//     if (!swiperInstance) {
-//       initSwiper();
-//     }
-//   } else {
-//     destroySwiper();
-//   }
-// }
+function checkSwiper() {
+  if (window.innerWidth >= 1440) {
+    if (!swiperInstance) {
+      initSwiper();
+    }
+  } else {
+    destroySwiper();
+  }
+}
 
-// window.addEventListener('DOMContentLoaded', checkSwiper);
-// window.addEventListener('resize', checkSwiper);
+window.addEventListener('DOMContentLoaded', checkSwiper);
+window.addEventListener('resize', checkSwiper);

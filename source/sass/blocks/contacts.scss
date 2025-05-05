@@ -47,10 +47,6 @@
   @media (min-width: $tablet) {
     row-gap: 40px;
     grid-template-columns: auto 768px auto;
-
-    // grid-template-columns: 680px;
-    // margin-left: 2px;
-    // justify-content: center;
   }
 
   @media (min-width: $desktop) {

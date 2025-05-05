@@ -55,9 +55,8 @@
   }
 }
 
-.form__extra-gap {
+.form__wrapper {
   @media (min-width: $desktop) {
-    // margin-top: 40px;
     width: 100%;
   }
 }
@@ -77,13 +76,14 @@
   @media (min-width: $tablet) {
     font-size: 25px;
     line-height: 25px;
-    margin: 0 0 25px;
+    margin: 0 0 23px;
+    padding-top: 4px;
   }
 
   @media (min-width: $desktop) {
     font-size: 35px;
     line-height: 35px;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
   }
 }
 
@@ -103,11 +103,12 @@
     font-size: 16px;
     line-height: 24px;
     width: 100%;
-    margin: 0 0 25px;
+    margin: 0 0 23px;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 40px;
+    margin: 0 0 38px;
   }
 }
 
@@ -135,13 +136,13 @@
   border: 1px solid #ff121f;
 }
 
-.form-request__form-group.invalid .form-request__input::placeholder {
-  opacity: 0;
-}
+// .form-request__form-group.invalid .form-request__input::placeholder {
+//   opacity: 0;
+// }
 
-.form-request__form-group.invalid .form-request__label {
-  opacity: 0;
-}
+// .form-request__form-group.invalid .form-request__label {
+//   opacity: 0;
+// }
 
 .form-request__input {
   width: 100%;
@@ -171,20 +172,20 @@
   }
 }
 
-.error-message {
-  font-family: $montserrat;
-  font-size: $font-size-16;
-  line-height: 16px;
-  font-weight: 400;
-  color: $color-basis;
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  background-color: $color-accent;
-  height: auto;
-  padding: 2px 0;
-}
+// .error-message {
+//   font-family: $montserrat;
+//   font-size: $font-size-16;
+//   line-height: 16px;
+//   font-weight: 400;
+//   color: $color-basis;
+//   position: absolute;
+//   top: 50%;
+//   left: 15px;
+//   transform: translateY(-50%);
+//   background-color: $color-accent;
+//   height: auto;
+//   padding: 2px 0;
+// }
 
 .form-request__input::placeholder {
   opacity: 0;
@@ -202,7 +203,7 @@
   font-weight: 400;
   color: $color-basis;
   position: absolute;
-  top: 50%;
+  top: 51%;
   left: 15px;
   transform: translateY(-50%);
   transition: all 0.3s ease;
@@ -221,16 +222,15 @@
 
 .form-request__input:not(:placeholder-shown) + .form-request__label {
   opacity: 0;
-  margin-left: -25px; /* или другое значение, чтобы полностью скрыть лейбл */
+  margin-left: -25px;
 }
 
 
 .form-request__input-submit {
   width: 100%;
-  min-height: 58px;
   border: none;
   background-color: $color-additional;
-  padding: 21px 19px;
+  padding: 22px 19px 20px;
   box-sizing: border-box;
   font-family: $montserrat;
   font-size: $font-size-16;
@@ -240,8 +240,7 @@
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    min-height: 56px;
-    padding: 20px;
+    padding: 21px 20px 19px;
   }
 
   @media (min-width: $desktop) {

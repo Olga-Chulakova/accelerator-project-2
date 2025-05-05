@@ -4,12 +4,6 @@
   @media (min-width: $desktop) {
     display: flex;
     gap: 10px;
-
-    // position: absolute;
-    // bottom: 80px;
-    // width: 1200px;
-    // left: 50%;
-    // transform: translateX(-50%);
   }
 }
 
@@ -25,22 +19,26 @@
   position: relative;
 }
 
-.details__duration::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  background-image: url("/__spritemap#sprite-moon-view");
-  width: 11px;
-  height: 11px;
+.details__duration {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    background-image: url("/__spritemap#sprite-moon-view");
+    width: 11px;
+    height: 11px;
+  }
 }
 
-.details__level::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  background-image: url("/__spritemap#sprite-level-view");
-  width: 10px;
-  height: 11px;
+.details__level {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    background-image: url("/__spritemap#sprite-level-view");
+    width: 10px;
+    height: 11px;
+  }
 }

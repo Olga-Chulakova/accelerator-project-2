@@ -14,24 +14,16 @@ function initSwiper() {
     const duplicateSlide = slideDiv.cloneNode(true);
     swiperWrapperDiv.appendChild(duplicateSlide);
   });
-  //const realSlidesCount = slideDivs.length;
   swiperInstance = new Swiper('.advantages__card-wrapper', {
     modules: [Navigation, Mousewheel],
     direction: 'horizontal',
     slidesPerGroup: 2,
-    //initialSlide: 2,
     slidesPerView: 'auto',
 
     spaceBetween: 30,
-    //loopedSlidesLimit: null,
     loopAdditionalSlides: 1,
-    //loopedSlides: realSlidesCount,
-    //slidesOffsetBefore: -290,
-    //centeredSlides: 'auto',
-    //observer: true,
     loop: true,
     speed: 700,
-    //loopedSlides: 3.2,
     navigation: {
       nextEl: '.advantages__slider-button--next',
       prevEl: '.advantages__slider-button--prev',

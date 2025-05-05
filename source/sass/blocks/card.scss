@@ -117,15 +117,19 @@
   justify-content: space-between;
 }
 
+.card__difficulty-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 84px;
+}
+
 .card__difficulty {
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
   width: 84px;
   color: $color-accent;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }
 
 .card__wrapper-star {

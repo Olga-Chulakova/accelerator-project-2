@@ -6,27 +6,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-
-
-  @media (min-width: $desktop) {
-    min-height: 800px;
-  }
 }
-
-// .hero-slider__list {
-//   padding: 0;
-//   margin: 0;
-//   list-style-type: none;
-//   min-height: 568px;
-
-//   @media (min-width: $tablet) {
-//     min-height: 1034px;
-//   }
-
-//   @media (min-width: $desktop) {
-//     min-height: 800px;
-//   }
-// }
 
 .hero-slider__item.swiper-slide {
   width: 100%;
@@ -104,7 +84,7 @@
   }
 }
 
-.hero-slider__text-wrapper.hero-slider__text-card--kamchatka {
+.hero-slider__text-wrapper.hero-slider__text-wrapper--kamchatka {
   position: relative;
 
   &::before {
@@ -241,15 +221,15 @@
   }
 }
 
-.hero-slider__text-card--kamchatka p,
-.hero-slider__text-card--altai p {
+.hero-slider__text-wrapper--kamchatka p,
+.hero-slider__text-wrapper--altai p {
   @media (width <= 767px) {
     margin-left: -2px;
     text-indent: -2px;
   }
 }
 
-.hero-slider__text-card--kamchatka h2 {
+.hero-slider__text-wrapper--kamchatka h2 {
   @media (min-width: $desktop) {
     z-index: 1;
   }
@@ -316,4 +296,3 @@
 .hero-slider__bullet.hero-slider__bullet--active {
   background-color: $color-accent;
 }
-

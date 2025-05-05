@@ -1,8 +1,40 @@
+.learning-process {
+  position: relative;
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      background-image:
+        image-set(
+          url("../../img/training-clouds@1x.webp") 1x,
+          url("../../img/training-clouds@2x.webp") 2x,
+          url("../../img/training-clouds@1x.png") 1x,
+          url("../../img/training-clouds@2x.png") 2x
+        );
+      width: 840px;
+      height: 280px;
+      top: -86px;
+      left: calc(50% - 81px);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    @media (min-width: $desktop) {
+      top: -93px;
+      left: calc(50% + 87px);
+    }
+  }
+}
+
 .learning-process__title {
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   margin: 0 0 23px;
+  z-index: 1;
 
   @media (min-width: $tablet) {
     font-size: 18px;
@@ -26,6 +58,7 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 25px;
+  z-index: 1;
 
 
   &::before {
@@ -164,7 +197,7 @@
     mask-size: cover;
     background-color: $color-basis;
     width: 25px;
-    height: 21px;
+    height: 22px;
     top: 3px;
     left: 1px;
 

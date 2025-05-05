@@ -116,14 +116,6 @@
 
 .training-card__slider-button--next.swiper-button-next {
   transform: rotate(-180deg);
-
-  // @media (min-width: $tablet) {
-  //   margin-top: 1px;
-  // }
-
-  // @media (min-width: $desktop) {
-  //   margin-top: 0;
-  // }
 }
 
 .training-card__list {
@@ -162,11 +154,11 @@
   height: 200px;
   overflow: hidden;
 
-  @media (width >= 768px) {
+  @media (min-width: $tablet) {
     width: 183px;
   }
 
-  @media (width >= 1440px) {
+  @media (min-width: $desktop) {
     width: 255px;
   }
 }
