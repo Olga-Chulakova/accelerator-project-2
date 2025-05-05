@@ -22,9 +22,14 @@
   @media (min-width: $desktop) {
     margin: 0 0 0 120px;
   }
+
+  @media (width >= 1500px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
-.reviews__title-wrapper {
+.reviews__controll-wrapper {
   width: 290px;
   margin: 0 auto;
 

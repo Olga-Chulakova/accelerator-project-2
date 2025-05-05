@@ -20,6 +20,8 @@
     position: absolute;
     background-image:
       image-set(
+        url("../../img/about@1x.webp") 1x,
+        url("../../img/about@2x.webp") 2x,
         url("../../img/about@1x.png") 1x,
         url("../../img/about@2x.png") 2x
       );
@@ -37,21 +39,21 @@
     margin: 0 auto;
 
     &::before {
-      content: "";
-      position: absolute;
       background-image:
         image-set(
-          url("../../img/about@1x.png") 1x,
-          url("../../img/about@2x.png") 2x
+          url("../../img/about-tablet@1x.webp") 1x,
+          url("../../img/about-tablet@2x.webp") 2x,
+          url("../../img/about-tablet@1x.png") 1x,
+          url("../../img/about-tablet@2x.png") 2x
         );
-      top: 170px;
+      top: 134px;
       background-size: cover;
       background-position: left top;
       background-repeat: no-repeat;
-      width: 575px;
-      height: 314px;
+      width: 476px;
+      height: 350px;
       z-index: -1;
-      left: -20px;
+      left: -23px;
     }
   }
 
@@ -60,10 +62,10 @@
     margin: 0 auto;
 
     &::before {
-      content: "";
-      position: absolute;
       background-image:
         image-set(
+          url("../../img/about@1x.webp") 1x,
+          url("../../img/about@2x.webp") 2x,
           url("../../img/about@1x.png") 1x,
           url("../../img/about@2x.png") 2x
         );

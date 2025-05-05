@@ -3,6 +3,10 @@
     width: 2020px;
     margin: 0 0 0 -290px;
     display: flex;
+
+    @media (width >= 1800px) {
+      margin: 0 auto;
+    }
   }
 }
 
