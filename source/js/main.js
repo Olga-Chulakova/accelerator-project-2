@@ -6,6 +6,3 @@ import './reviews-swiper.js';
 import './advantages-swiper.js';
 import './gallery-swiper.js';
 import './form-validation.js';
-// import './swiper.js';
-// import './swiper-test.js';
-

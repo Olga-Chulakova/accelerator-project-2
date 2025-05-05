@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -650,11 +655,11 @@
         <div class="form__wrapper form-request form__extra-gap">
           <form class="form-request__filter" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate>
             <div class="form-request__form-group">
-              <input class="form-request__input form-request__input-phone" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required pattern="^\+7\s\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}$" data-required="Заполните поле" data-pattern-mismatch="Введите +7 (000)-000-00-00" data-pattern-phone-message="Требуемый формат +7 (000)-000-00-00">
+              <input class="form-request__input form-request__input-phone" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required pattern="^\+7\s\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}$" data-required="Заполните поле" data-pattern-mismatch="Вводите только цифры" data-pattern-phone-message="Требуемый формат +7 (000)-000-00-00">
               <label class="form-request__label form-request__label-phone" for="phone">Телефон</label>
             </div>
             <div class="form-request__form-group">
-              <input class="form-request__input form-request__input-text" type="email" id="email" name="email" placeholder="example@mail.ru" required data-required="Заполните поле" data-pattern-mismatch="Вставьте адрес после @" data-type-mismatch="Вставьте символ @" data-missing-dot="Вставьте точку перед .com">
+              <input class="form-request__input form-request__input-text" type="email" id="email" name="email" placeholder="example@mail.ru" required data-required="Заполните поле" data-pattern-mismatch="Введите Email в формате __@__.__">
               <label class="form-request__label form-request__label-text" for="email">Email</label>
             </div>
             <button class="form-request__input-submit" type="submit" aria-label="Отправить">
